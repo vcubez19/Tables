@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		323C06502701A3AD00DA273A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 323C064E2701A3AD00DA273A /* LaunchScreen.storyboard */; };
 		323C065B2701A3AD00DA273A /* TablesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C065A2701A3AD00DA273A /* TablesTests.swift */; };
 		323C06662701A3AE00DA273A /* TablesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C06652701A3AE00DA273A /* TablesUITests.swift */; };
+		323C06832702202100DA273A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C06822702202100DA273A /* Model.swift */; };
+		323C069A27022B7500DA273A /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 323C069927022B7500DA273A /* Cosmos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		323C06612701A3AE00DA273A /* TablesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TablesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		323C06652701A3AE00DA273A /* TablesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesUITests.swift; sourceTree = "<group>"; };
 		323C06672701A3AE00DA273A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		323C06822702202100DA273A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323C069A27022B7500DA273A /* Cosmos in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,7 @@
 				323C06432701A3A200DA273A /* AppDelegate.swift */,
 				323C06452701A3A200DA273A /* SceneDelegate.swift */,
 				323C06472701A3A200DA273A /* ViewController.swift */,
+				323C06822702202100DA273A /* Model.swift */,
 				323C06492701A3A200DA273A /* Main.storyboard */,
 				323C064C2701A3AD00DA273A /* Assets.xcassets */,
 				323C064E2701A3AD00DA273A /* LaunchScreen.storyboard */,
@@ -144,6 +149,9 @@
 			dependencies = (
 			);
 			name = Tables;
+			packageProductDependencies = (
+				323C069927022B7500DA273A /* Cosmos */,
+			);
 			productName = Tables;
 			productReference = 323C06402701A3A200DA273A /* Tables.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 323C06372701A3A200DA273A;
+			packageReferences = (
+				323C069827022B7500DA273A /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = 323C06412701A3A200DA273A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +272,7 @@
 				323C06482701A3A200DA273A /* ViewController.swift in Sources */,
 				323C06442701A3A200DA273A /* AppDelegate.swift in Sources */,
 				323C06462701A3A200DA273A /* SceneDelegate.swift in Sources */,
+				323C06832702202100DA273A /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3DY97BVWHY;
 				INFOPLIST_FILE = Tables/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3DY97BVWHY;
 				INFOPLIST_FILE = Tables/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,6 +607,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		323C069827022B7500DA273A /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		323C069927022B7500DA273A /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 323C069827022B7500DA273A /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 323C06382701A3A200DA273A /* Project object */;
 }
